@@ -8,7 +8,6 @@ import HeaderComponent from './HeaderComponent.jsx'
 import FooterComponent from './FooterComponent.jsx'
 import LogoutComponent from './LogoutComponent.jsx'
 import WelcomeComponent from './WelcomeComponent.jsx'
-import testRoute from "./testRoute";
 
 class TodoApp extends Component {
     render() {
@@ -19,7 +18,6 @@ class TodoApp extends Component {
                         <HeaderComponent/>
                         <Switch>
                             <Route path="/" exact component={LoginComponent}/>
-                            <Route path="/testRoute" exact component={testRoute}/>
 
                             <Route path="/login" component={LoginComponent}/>
                             <AuthenticatedRoute path="/welcome/:name" component={WelcomeComponent}/>
