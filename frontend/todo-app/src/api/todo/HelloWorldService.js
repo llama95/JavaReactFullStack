@@ -14,6 +14,9 @@ class HelloWorldService{
         //returns a promise
 
     }
+    executeHelloWorldPathVariable(name){
+        return axios.get(`http://localhost:8080/helloBean-${name}`) //using the tick character here on purpose
+    }
 
 }
 export default new HelloWorldService();
