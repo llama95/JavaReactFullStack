@@ -16,7 +16,8 @@ public class Controller {
 
     @RequestMapping(method = RequestMethod.GET, path = "/helloBean/{name}")
     public HelloWorldBean helloWorldPathVariable(@PathVariable String name) {
-        return new HelloWorldBean(String.format("hello world bean %s", name));
+        throw new RuntimeException("Something happened bsad");
+//        return new HelloWorldBean(String.format("hello world bean %s", name));
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/hello-bean")

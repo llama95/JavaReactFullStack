@@ -15,7 +15,7 @@ class HelloWorldService{
 
     }
     executeHelloWorldPathVariable(name){
-        return axios.get(`http://localhost:8080/helloBean-${name}`) //using the tick character here on purpose
+        return axios.get(`http://localhost:8080/helloBean/${name}`) //using the tick character here on purpose so we can access var
     }
 
 }
