@@ -32,6 +32,7 @@ class WelcomeComponent extends Component {
     }
 
     retrieveWelcomeMessage() {
+
         HelloWorldService.executeHelloWorldPathVariable(this.props.match.params.name)
             .then(response => this.setState({welcomeMessage : response.data.message})) //set the welcomeMessage to the response.data.message
             .catch(error=>this.handleError(error))
