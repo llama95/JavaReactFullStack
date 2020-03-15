@@ -1,11 +1,16 @@
-import axios from "axios";
+import axios from 'axios'
 
-class TodoDataService{
-    retrieveAllTodos(name){
-        return axios.get(`http://localhost:8080/users/${name}/todos`) //using the tick character here on purpose so we can access var
+class TodoDataService {
+    retrieveAllTodos(name) {
+        //console.log('executed service')
+        return axios.get(`http://localhost:8080/users/${name}/todos`);
     }
 
+    deleteTodo(name, id) {
+        //console.log('executed service')
+        return axios.delete(`http://localhost:8080/users/${name}/todos/${id}`);
+    }
 
 }
 
-export default new TodoDataService();
+export default new TodoDataService()

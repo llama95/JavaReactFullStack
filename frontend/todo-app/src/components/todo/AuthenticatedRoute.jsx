@@ -6,7 +6,6 @@ class AuthenticatedRoute extends Component {
     render() {
         if(AuthenticationService.isUserLoggedIn()) {
             return <Route {...this.props}/>
-        //    spread opeator ->
         } else {
             return <Redirect to="/login"/>
         }
