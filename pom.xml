@@ -21,6 +21,7 @@
     </build>
 
 
+
     <dependencies>
 
 
@@ -30,6 +31,13 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.webjars.npm/axios -->
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>axios</artifactId>
+            <version>0.19.2</version>
+        </dependency>
+
 
 
 

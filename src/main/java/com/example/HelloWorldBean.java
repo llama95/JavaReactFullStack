@@ -16,7 +16,7 @@ public class HelloWorldBean {
         this.message = message;
     }
     @Override
-    public String toString() {
+    public String toString() { //without this toString it would just print out the objects address.
         return "HelloWorldBean{" +
                 "message='" + message + '\'' +
                 '}';

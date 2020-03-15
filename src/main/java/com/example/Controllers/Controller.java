@@ -1,5 +1,6 @@
-package com.example;
+package com.example.Controllers;
 
+import com.example.HelloWorldBean;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -16,8 +17,8 @@ public class Controller {
 
     @RequestMapping(method = RequestMethod.GET, path = "/helloBean/{name}")
     public HelloWorldBean helloWorldPathVariable(@PathVariable String name) {
-        throw new RuntimeException("Something happened bsad");
-//        return new HelloWorldBean(String.format("hello world bean %s", name));
+//        throw new RuntimeException("Something happened bsad");
+        return new HelloWorldBean(String.format("hello world bean %s", name));
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/hello-bean")
@@ -27,7 +28,7 @@ public class Controller {
 
 
     @EnableWebSecurity
-    public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+    public static class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         @Override
         protected void configure(HttpSecurity http) throws Exception {
